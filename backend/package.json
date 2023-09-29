@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "an schedule app for UET students",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js",
+    "data": "node ./src/scrape.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhdaonguyen/SchedUET-SQLvers.git"
+  },
+  "author": "thanhdaonguyen, vanphinguyen, vanthiennguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhdaonguyen/SchedUET-SQLvers/issues"
+  },
+  "homepage": "https://github.com/thanhdaonguyen/SchedUET-SQLvers#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
