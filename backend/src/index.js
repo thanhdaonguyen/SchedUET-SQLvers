@@ -3,6 +3,13 @@ import dotenv from "dotenv";
 
 //import routers
 import router from "../routes/postRoutes.js";
+import accountRouter from "../routes/accountRoutes.js"
+import materialRouter from "../routes/materialRoutes.js"
+import scheduleRouter from "../routes/scheduleRoutes.js"
+import sectionRouter from "../routes/sectionRoutes.js"
+import studentRouter from "../routes/studentRoutes.js"
+import takesRouter from "../routes/takesRoutes.js"
+
 
 dotenv.config();
 
@@ -15,6 +22,12 @@ app.use(express.static("./public"))
 
 //redirect requests to endpoint starting with /posts to postRoutes.js
 app.use("/posts", router);
+app.use("/schedules", scheduleRouter)
+app.use("/accounts", accountRouter)
+app.use("/materials", materialRouter)
+app.use("/sections", sectionRouter)
+app.use("/students", studentRouter)
+app.use("/takes", takesRouter)
 
 //Global Error Handler. IMPORTANT function params MUST start with err
 app.use((err, req, res, next) => {
