@@ -10,6 +10,4 @@ const pool = mysql.createPool({
   port: 3306
 });
 
-let sql = "select * from customers;";
-
 export default pool.promise();
