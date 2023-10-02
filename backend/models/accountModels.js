@@ -1,9 +1,9 @@
 import db from "../config/db.js";
+import * as q from "./queries/accountQueries.js";
 
 class accMod {
   static defaultQuery() {
-    let q = "show databases;";
-    return db.query(q);
+    return db.query(q.defaultQuery);
   }
 }
 

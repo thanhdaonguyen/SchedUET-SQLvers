@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 7000;
 app.use(express.json());
 app.use(express.static("./public"))
 
-//redirect requests to endpoint starting with /posts to postRoutes.js
+//use routers
 app.use("/posts", router);
 app.use("/schedules", scheduleRouter)
 app.use("/accounts", accountRouter)
